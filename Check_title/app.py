@@ -8,7 +8,7 @@ st.title("Hiển thị nội dung bài báo và phân tích")
 
 # Đường dẫn file
 csv_file = os.path.join(os.path.dirname(__file__), "all_articles.csv")
-output_file = "output.txt"
+output_file = os.path.join(os.path.dirname(__file__), "output.txt")
 
 # Đọc dữ liệu từ file CSV
 articles = {}
