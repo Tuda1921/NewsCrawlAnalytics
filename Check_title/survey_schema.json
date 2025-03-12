@@ -1,0 +1,488 @@
+{
+    "title": "Bảng mã khảo sát nội dung & hình thức thông điệp thích ứng với biến đổi khí hậu trên báo mạng điện tử khu vực ĐBSCL",
+    "questions": [
+      {
+        "id": "relation",
+        "prompt": "Hãy đánh giá mức độ liên quan của bài báo này đến chủ đề biến đổi khí hậu.",
+        "options": [
+          "Hoàn toàn không có liên quan",
+          "Phần lớn không liên quan",
+          "Liên quan ở mức độ trung bình",
+          "Phần lớn có liên quan",
+          "Hoàn toàn có liên quan"
+        ],
+        "multiple": false
+      },
+      {
+        "id": "title_type",
+        "prompt": "Bài báo có tiêu đề thuộc thể loại nào?",
+        "options": [
+          "Tít thông tin, xác nhận sự kiện",
+          "Tít giật gân",
+          "Tít dạng câu hỏi",
+          "Tít bình luận/biểu cảm",
+          "Tít trích dẫn",
+          "Tít chơi chữ",
+          "Tít ẩn dụ, so sánh",
+          "Khác: ghi rõ"
+        ],
+        "explanations": {
+            "Tít thông tin, xác nhận sự kiện": "Tóm tắt nội dung chính của bài viết, cung cấp thông tin khách quan, trung thực. Ví dụ: 'ĐBSCL ứng dụng công nghệ cao để thích ứng với biến đổi khí hậu.'",
+            "Tít giật gân": "Sử dụng ngôn ngữ mạnh, gây sốc, thu hút sự chú ý của độc giả. Ví dụ: 'ĐBSCL đang 'chết đuối' vì biến đổi khí hậu, nhưng công nghệ có thể là cứu cánh?'",
+            "Tít dạng câu hỏi": "Đặt câu hỏi để kích thích sự tò mò, khuyến khích độc giả tìm hiểu thêm. Ví dụ: 'Liệu công nghệ có thể cứu ĐBSCL khỏi biến đổi khí hậu?'",
+            "Tít bình luận/biểu cảm": "Thể hiện quan điểm, cảm xúc của tác giả về vấn đề được đề cập. Ví dụ: 'ĐBSCL: Hy vọng mới từ những cánh đồng thông minh.'",
+            "Tít trích dẫn": "Dùng một câu nói nổi bật, ấn tượng của nhân vật trong bài viết. Ví dụ: 'Nông dân ĐBSCL: 'Chúng tôi không đầu hàng trước biến đổi khí hậu.''",
+            "Tít chơi chữ": "Sử dụng từ ngữ đa nghĩa, chơi chữ để tạo sự thú vị, hài hước. Ví dụ: 'ĐBSCL: 'Lúa mặn' vẫn 'ngọt' nhờ công nghệ.'",
+            "Tít ẩn dụ, so sánh": "Dùng hình ảnh ẩn dụ để làm nổi bật ý nghĩa của bài viết. Ví dụ: 'ĐBSCL: 'Phượng hoàng' tái sinh từ công nghệ xanh.'"
+        },
+        "multiple": false
+      },
+      {
+        "id": "title_clean_type",
+        "prompt": "Các thể loại tít nào dưới đây xuất hiện trong tin bài?",
+        "options": [
+            "Tít tóm tắt",
+            "Tít dạng câu hỏi",
+            "Tít dạng kêu gọi hành động",
+            "Tít chơi chữ",
+            "Tít dài",
+            "Dạng tít khác"            
+        ],
+        "multiple": false
+      },
+      {
+        "id": "source",
+        "prompt": "Nguồn bài báo?",
+        "options": [
+          "Nội bộ",
+          "Nước ngoài",
+          "Báo/kênh khác",
+          "Thông cáo báo chí",
+          "Công chúng",
+          "Chuyên gia",
+          "Không rõ"
+        ],
+        "explanations": {
+          "Nội bộ": "Bài viết do nhà báo/phóng viên của tờ báo/kênh truyền hình thực hiện",
+          "Nước ngoài": "Bài viết được trích dẫn hoặc dịch lại từ một nguồn tin nước ngoài)",
+          "Báo/kênh khác": "Bài viết được đăng lại từ một tờ báo/kênh truyền hình khác)",
+          "Thông cáo báo chí": "Bài viết là thông cáo báo chí từ một tổ chức/cơ quan/doanh nghiệp)",
+          "Công chúng": "Bài viết được viết bởi người dân hoặc người dùng mạng xã hội",
+          "Chuyên gia": "Bài viết được viết bởi một chuyên gia trong lĩnh vực liên quan)",
+          "Không rõ, không thể xác định rõ nguồn gốc của bài viết.":""
+        },
+        "multiple": false
+      },
+      {
+        "id": "citation_source",
+        "prompt": "Nguồn thông tin trích dẫn trong tin bài?",
+        "description": "Chọn một nhóm nguồn thông tin chính, sau đó chọn một nguồn cụ thể trong nhóm đó.",
+        "categories": {
+          "Cơ quan nhà nước": {
+            "description": "Các cơ quan thuộc nhà nước có trách nhiệm triển khai và quản lý chính sách liên quan đến biến đổi khí hậu.",
+            "subcategories": [
+              "Lãnh đạo Đảng, Nhà nước Trung ương",
+              "Bộ, Ban, Ngành (Không thuộc Bộ Nông nghiệp, Bộ Tài Nguyên, Bộ Khoa học)",
+              "Bộ Nông nghiệp và Phát triển Nông thôn",
+              "Bộ Tài nguyên và Môi trường",
+              "Bộ Khoa học và Công nghệ",
+              "Ủy ban Nhân dân cấp tỉnh/thành phố",
+              "Ủy ban Nhân dân cấp huyện/quận",
+              "Ủy ban Nhân dân cấp xã/phường",
+              "Các Sở, phòng Tài nguyên & Môi trường, Sở Nông nghiệp cấp tỉnh",
+              "Các Viện nghiên cứu nhà nước",
+              "Viện Khoa học Kỹ thuật Nông nghiệp Nam Bộ",
+              "Trung tâm Nghiên cứu Biến đổi Khí hậu và Phát triển Xanh",
+              "Khác"
+            ]
+          },
+          "Chuyên gia/Nhà khoa học": {
+            "description": "Các chuyên gia hoặc nhà nghiên cứu có kiến thức chuyên sâu về biến đổi khí hậu và các lĩnh vực liên quan.",
+            "subcategories": [
+              "Chuyên gia về biến đổi khí hậu",
+              "Chuyên gia về nông nghiệp",
+              "Chuyên gia về năng lượng tái tạo",
+              "Chuyên gia về quản lý tài nguyên nước",
+              "Chuyên gia về kinh tế",
+              "Các nhà nghiên cứu thuộc các trường đại học, viện nghiên cứu"
+            ]
+          },
+          "Người dân": {
+            "description": "Cộng đồng người dân bị ảnh hưởng hoặc có vai trò trong thích ứng biến đổi khí hậu.",
+            "subcategories": [
+              "Nông dân",
+              "Ngư dân",
+              "Người dân thành thị",
+              "Cộng đồng dân tộc thiểu số"
+            ]
+          },
+          "Doanh nghiệp": {
+            "description": "Các doanh nghiệp hoạt động trong các lĩnh vực liên quan đến biến đổi khí hậu và phát triển bền vững.",
+            "subcategories": [
+              "Doanh nghiệp nông nghiệp",
+              "Doanh nghiệp thủy sản",
+              "Doanh nghiệp năng lượng tái tạo",
+              "Doanh nghiệp công nghệ",
+              "Các doanh nghiệp khác hoạt động tại ĐBSCL"
+            ]
+          },
+          "Tổ chức phi chính phủ": {
+            "description": "Các tổ chức phi chính phủ hoạt động trong các lĩnh vực môi trường, phát triển cộng đồng và quốc tế.",
+            "subcategories": [
+              "Các tổ chức hoạt động về môi trường (WWF, Greenpeace, Mạng lưới Sông Mê Kông,...)",
+              "Các tổ chức hoạt động về phát triển cộng đồng (Trung tâm Nghiên cứu Phát triển Nông thôn - RCRD)",
+              "Các tổ chức quốc tế hoạt động tại Việt Nam (UNDP, USAID, Oxfam Việt Nam,...)",
+              "Khác"
+            ]
+          },
+          "Khác": {
+            "description": "Các nguồn thông tin khác ngoài các nhóm trên.",
+            "subcategories": [
+              "Các trang mạng xã hội (Facebook, Zalo,...)",
+              "Diễn đàn trực tuyến",
+              "Các trang web/blog cá nhân",
+              "Các nguồn thông tin khác (vui lòng ghi rõ)"
+            ]
+          }
+        },
+        "multiple": false
+      },      
+      {
+        "id": "article_type",
+        "prompt": "Bài báo thuộc thể loại nào?",
+        "options": [
+          "Tin tức",
+          "Phóng sự/Ký sự",
+          "Bình luận/Phân tích",
+          "Phỏng vấn",
+          "Infographic/Video",
+          "Longform",
+          "Phản ánh",
+          "Khác"
+        ],
+        "multiple": false
+      },
+      {
+        "id": "format",
+        "prompt": "Định dạng bài báo?",
+        "options": [
+          "Bài viết (text)",
+          "Hình ảnh",
+          "Video",
+          "Podcast",
+          "Kết hợp đa phương tiện"
+        ],
+        "multiple": true
+      },
+      {
+        "id": "vocabulary",
+        "prompt": "Từ vựng sử dụng chủ yếu trong bài báo?",
+        "description": "Chọn một loại ngôn ngữ chủ yếu được sử dụng trong bài báo.",
+        "options": [
+          "Ngôn ngữ khoa học",
+          "Ngôn ngữ hành chính",
+          "Ngôn ngữ truyền thông",
+          "Ngôn ngữ kêu gọi hành động",
+          "Khác"
+        ],
+        "explanations": {
+          "Ngôn ngữ khoa học": "Sử dụng thuật ngữ khoa học chuyên ngành liên quan đến biến đổi khí hậu, phát triển bền vững và công nghệ. Ví dụ: 'biến đổi toàn cầu', 'hiệu ứng nhà kính', 'năng lượng tái tạo', 'kinh tế tuần hoàn'. Bài báo có thể sử dụng số liệu, biểu đồ, hình ảnh và trích dẫn ý kiến chuyên gia để tăng tính thuyết phục.",
+          "Ngôn ngữ hành chính": "Dùng trong các văn bản chính thức, mang tính pháp lý của cơ quan nhà nước, như văn bản quy phạm pháp luật. Ngôn ngữ trang trọng, lịch sự, khách quan, tuân theo quy chuẩn hành chính.",
+          "Ngôn ngữ truyền thông": "Ngôn ngữ phổ thông, dễ hiểu, hướng tới đối tượng công chúng. Có thể sử dụng biện pháp tu từ như ẩn dụ, so sánh, nhân hóa để tăng sự thu hút. Câu văn thường ngắn gọn, súc tích, có thể kết hợp với hình ảnh, video, infographic.",
+          "Ngôn ngữ kêu gọi hành động": "Mục tiêu là khuyến khích công chúng hoặc các bên liên quan tham gia vào các hoạt động ứng phó biến đổi khí hậu. Gợi ý các giải pháp cụ thể, cung cấp thông tin về tổ chức, dự án để người đọc có thể tham gia thực tế.",
+          "Khác": "Các loại ngôn ngữ khác không nằm trong danh mục trên, vui lòng ghi rõ."
+        },
+        "multiple": false
+      },      
+      {
+        "id": "writing_style",
+        "prompt": "Phong cách ngôn ngữ của bài báo?",
+        "description": "Đánh giá phong cách ngôn ngữ của bài báo dựa trên cấu trúc câu và giọng điệu.",
+        "subcategories": {
+          "Cấu trúc câu": {
+            "prompt": "Cấu trúc câu được sử dụng chủ yếu?",
+            "options": [
+              "Chủ yếu sử dụng câu dài",
+              "Chủ yếu sử dụng câu ngắn",
+              "Chủ yếu sử dụng câu đơn",
+              "Chủ yếu sử dụng câu phức"
+            ]
+          },
+          "Giọng điệu": {
+            "prompt": "Giọng điệu của bài báo?",
+            "options": [
+              "Giọng điệu trang trọng, lịch sự",
+              "Giọng điệu bình dân, dễ hiểu",
+              "Giọng điệu hài hước, dí dỏm"
+            ]
+          }
+        },
+        "multiple": false
+      },      
+      {
+        "id": "rhetoric",
+        "prompt": "Các biện pháp tu từ sử dụng trong tin bài?",
+        "description": "Chọn các biện pháp tu từ được sử dụng trong bài báo. Một bài báo có thể sử dụng nhiều biện pháp tu từ khác nhau.",
+        "options": [
+          "So sánh",
+          "Ẩn dụ",
+          "Nhân hóa",
+          "Hoán dụ",
+          "Điệp ngữ",
+          "Song hành",
+          "Đối lập",
+          "Cường điệu",
+          "Chêm xen",
+          "Liệt kê"
+        ],
+        "explanations": {
+          "So sánh": "Đối chiếu hai sự vật, hiện tượng có điểm tương đồng để làm rõ ý nghĩa. Ví dụ: 'Năng lượng tái tạo là nguồn năng lượng sạch sẽ như bầu trời xanh.'",
+          "Ẩn dụ": "Dùng một hình ảnh để ám chỉ một sự vật, hiện tượng khác có tính chất tương đồng. Ví dụ: 'Biến đổi khí hậu là một con quái vật đang đe dọa cuộc sống của chúng ta.'",
+          "Nhân hóa": "Gán tính cách, hành động của con người cho sự vật, thiên nhiên. Ví dụ: 'Trái đất đang than khóc vì những hành động tàn phá môi trường của con người.'",
+          "Hoán dụ": "Dùng một phần hoặc đặc điểm của sự vật để chỉ toàn thể hoặc ngược lại. Ví dụ: 'Cần chung tay bảo vệ lá phổi xanh của Trái đất.'",
+          "Điệp ngữ": "Lặp lại một từ, cụm từ để nhấn mạnh ý nghĩa. Ví dụ: 'Phát triển bền vững, phát triển bền vững, phát triển bền vững là chìa khóa cho tương lai của chúng ta.'",
+          "Song hành": "Đặt hai yếu tố có tính tương đồng cạnh nhau để làm nổi bật ý nghĩa. Ví dụ: 'Biến đổi khí hậu và phát triển bền vững là hai mặt của cùng một vấn đề.'",
+          "Đối lập": "Đưa ra hai yếu tố trái ngược nhau để nhấn mạnh sự khác biệt. Ví dụ: 'Chúng ta phải lựa chọn giữa một tương lai xanh và một tương lai đen tối.'",
+          "Cường điệu": "Phóng đại mức độ của sự việc để gây ấn tượng mạnh. Ví dụ: 'Hậu quả của biến đổi khí hậu sẽ là thảm khốc nếu chúng ta không hành động ngay lập tức.'",
+          "Chêm xen": "Thêm thông tin bổ sung giữa câu để nhấn mạnh hoặc giải thích thêm. Ví dụ: 'Theo các nhà khoa học, mực nước biển có thể dâng cao đến 1 mét vào cuối thế kỷ này. Điều này sẽ dẫn đến những thảm họa thiên tai kinh hoàng như lũ lụt, hạn hán và mất mùa.'",
+          "Liệt kê": "Sắp xếp nhiều yếu tố liên tiếp để tạo ấn tượng về số lượng hoặc phạm vi. Ví dụ: 'Để ứng phó với biến đổi khí hậu, chúng ta cần thực hiện nhiều biện pháp như: giảm phát thải khí nhà kính, phát triển năng lượng tái tạo, sử dụng năng lượng hiệu quả và bảo vệ rừng.'"
+        },
+        "multiple": true
+      },      
+      {
+        "id": "approach",
+        "prompt": "Phân loại theo góc độ tiếp cận trong tin bài?",
+        "description": "Chọn các góc độ tiếp cận chính mà bài báo sử dụng để phân tích vấn đề biến đổi khí hậu.",
+        "options": [
+          "Khoa học",
+          "Kinh tế",
+          "Xã hội",
+          "Môi trường",
+          "Chính trị",
+          "Nhiều góc độ"
+        ],
+        "explanations": {
+          "Khoa học": "Bài báo cung cấp thông tin dựa trên các bằng chứng khoa học về biến đổi khí hậu và phát triển bền vững.",
+          "Kinh tế": "Bài báo phân tích tác động kinh tế của biến đổi khí hậu và các giải pháp phát triển bền vững.",
+          "Xã hội": "Bài báo xem xét ảnh hưởng của biến đổi khí hậu đến đời sống con người và các giải pháp xã hội.",
+          "Môi trường": "Bài báo tập trung vào các vấn đề môi trường như ô nhiễm, suy thoái đất, bảo tồn tài nguyên thiên nhiên.",
+          "Chính trị": "Bài báo phân tích vai trò của chính sách và pháp luật trong ứng phó biến đổi khí hậu và phát triển bền vững.",
+          "Nhiều góc độ": "Bài báo tiếp cận vấn đề từ nhiều góc độ khác nhau, không chỉ tập trung vào một khía cạnh duy nhất."
+        },
+        "multiple": true
+      },      
+      {
+        "id": "subtopic",
+        "prompt": "Phân loại theo chủ đề con?",
+        "description": "Chọn các chủ đề chính mà bài báo đề cập đến liên quan đến biến đổi khí hậu và phát triển bền vững.",
+        "options": [
+          "Tác động của biến đổi khí hậu",
+          "Giải pháp thích ứng biến đổi khí hậu",
+          "Sáng kiến phát triển bền vững",
+          "Vai trò của khoa học công nghệ",
+          "Chính sách và pháp luật",
+          "Nhận thức và hành động của cộng đồng",
+          "Nhiều chủ đề trong bài"
+        ],
+        "explanations": {
+          "Tác động của biến đổi khí hậu": "Bài báo phân tích các tác động của biến đổi khí hậu như hạn hán, lũ lụt, xâm nhập mặn, nước biển dâng cao, suy thoái đất, ảnh hưởng đến sản xuất nông nghiệp và an ninh lương thực.",
+          "Giải pháp thích ứng biến đổi khí hậu": "Bài báo đề cập đến các giải pháp như phát triển năng lượng tái tạo, sử dụng nước hiệu quả, canh tác thích ứng, xây dựng đê điều, di dời dân cư.",
+          "Sáng kiến phát triển bền vững": "Bài báo giới thiệu các sáng kiến như nông nghiệp bền vững, đánh bắt thủy sản bền vững, du lịch sinh thái, phát triển đô thị xanh.",
+          "Vai trò của khoa học công nghệ": "Bài báo nhấn mạnh ứng dụng khoa học công nghệ trong dự báo biến đổi khí hậu, phát triển giống cây trồng và vật nuôi chịu hạn, hệ thống tưới tiêu tiết kiệm nước.",
+          "Chính sách và pháp luật": "Bài báo phân tích các chính sách và luật liên quan đến biến đổi khí hậu, vai trò của chính phủ, các tổ chức quốc tế và phi chính phủ.",
+          "Nhận thức và hành động của cộng đồng": "Bài báo đánh giá mức độ nhận thức của người dân về biến đổi khí hậu, các hành động cộng đồng thực hiện để thích ứng.",
+          "Nhiều chủ đề trong bài": "Bài báo đề cập đến nhiều chủ đề khác nhau thay vì tập trung vào một chủ đề duy nhất."
+        },
+        "multiple": true
+      },      
+      {
+        "id": "frame",
+        "prompt": "Loại khung (frame) chính xuất hiện trong tin bài?",
+        "description": "Chọn một loại khung chính phản ánh cách tiếp cận của bài báo đối với vấn đề biến đổi khí hậu.",
+        "options": [
+          "Khung giải pháp",
+          "Khung trách nhiệm",
+          "Khung bình thường hóa",
+          "Khung vấn đề",
+          "Khung hy vọng",
+          "Khung giáo dục",
+          "Khung kinh tế"
+        ],
+        "explanations": {
+          "Khung giải pháp": [
+            "Giới thiệu các giải pháp tiềm năng để giải quyết vấn đề, đồng thời truyền cảm hứng cho công chúng tham gia vào quá trình chuyển đổi.",
+            "Nhấn mạnh vào các cơ hội tiềm năng từ quá trình chuyển đổi, như phát triển kinh tế xanh, tạo việc làm mới, nâng cao chất lượng cuộc sống.",
+            "Giới thiệu các thành tựu khoa học và công nghệ mới có thể ứng dụng vào phát triển bền vững và thích ứng với biến đổi khí hậu."
+          ],
+          "Khung trách nhiệm": [
+            "Phân tích nguyên nhân gốc rễ của biến đổi khí hậu và kêu gọi các bên liên quan chịu trách nhiệm giải quyết vấn đề.",
+            "Phân tích tác động của biến đổi khí hậu đối với Đồng bằng sông Cửu Long và người dân địa phương.",
+            "Xác định các bên liên quan chịu trách nhiệm ứng phó với biến đổi khí hậu và phát triển bền vững, ví dụ: chính phủ, doanh nghiệp, tổ chức phi chính phủ, cộng đồng.",
+            "Đề xuất các giải pháp để phân bổ trách nhiệm và đảm bảo sự tham gia của tất cả các bên liên quan."
+          ],
+          "Khung bình thường hóa": [
+            "Giảm thiểu sự lo lắng và kỳ thị đối với biến đổi khí hậu, đồng thời khuyến khích công chúng hành động.",
+            "Nhấn mạnh biến đổi khí hậu là một vấn đề toàn cầu và ảnh hưởng đến tất cả mọi người.",
+            "Chia sẻ những câu chuyện về những người và cộng đồng đang nỗ lực thích ứng với biến đổi khí hậu.",
+            "Khuyến khích công chúng thay đổi lối sống để góp phần giảm thiểu tác động của biến đổi khí hậu.",
+            "Khác",
+            "Không đề cập khung bình thường hóa"
+          ],
+          "Khung vấn đề": [
+            "Nêu mức độ nghiêm trọng của biến đổi khí hậu và tác động tiêu cực của nó đối với Đồng bằng sông Cửu Long.",
+            "Cung cấp số liệu và bằng chứng khoa học về biến đổi khí hậu và tác động của nó.",
+            "Chia sẻ những câu chuyện về những người bị ảnh hưởng bởi biến đổi khí hậu.",
+            "Kêu gọi hành động khẩn cấp để giải quyết vấn đề.",
+            "Khác",
+            "Không đề cập khung vấn đề"
+          ],
+          "Khung hy vọng": [
+            "Tập trung vào những điều tích cực và tiềm năng trong tương lai sẽ giải quyết được vấn đề biến đổi khí hậu.",
+            "Nhấn mạnh biến đổi khí hậu có thể được kiểm soát và xây dựng một tương lai bền vững hơn.",
+            "Nhấn mạnh vào những tiến bộ đã đạt được trong việc ứng phó biến đổi khí hậu và phát triển bền vững.",
+            "Chia sẻ những câu chuyện về những người và cộng đồng đang tạo ra sự thay đổi tích cực.",
+            "Kêu gọi công chúng hành động để xây dựng một tương lai tốt đẹp hơn.",
+            "Khác",
+            "Không đề cập khung hy vọng"
+          ],
+          "Khung giáo dục": [
+            "Nâng cao nhận thức và cung cấp thông tin cho công chúng về biến đổi khí hậu, phát triển bền vững và ứng dụng khoa học công nghệ.",
+            "Giải thích các khái niệm và thuật ngữ liên quan đến biến đổi khí hậu.",
+            "Cung cấp thông tin về các giải pháp tiềm năng cho biến đổi khí hậu và phát triển bền vững.",
+            "Khác",
+            "Không đề cập khung giáo dục"
+          ],
+          "Khung kinh tế": [
+            "Phân tích những lợi ích kinh tế của việc thích ứng biến đổi khí hậu và phát triển bền vững."
+          ]
+        },
+        "multiple": false
+      },      
+      {
+        "id": "main_message",
+        "prompt": "Thông điệp chính mà tin bài muốn truyền tải là gì?",
+        "description": "Chọn một thông điệp chính phản ánh nội dung cốt lõi của bài báo về thích ứng với biến đổi khí hậu.",
+        "options": [
+          "Giảm thiểu tác động của biến đổi khí hậu",
+          "Phát triển nông nghiệp bền vững",
+          "Xây dựng các công trình phòng chống thiên tai",
+          "Phát triển các giống cây trồng, vật nuôi thích ứng với biến đổi khí hậu",
+          "Kêu gọi sự tham gia của các bên liên quan",
+          "Xây dựng và quảng bá các mô hình điển hình về thích ứng với biến đổi khí hậu",
+          "Khuyến khích đầu tư vào các dự án phát triển bền vững"
+        ],
+        "explanations": {
+          "Giảm thiểu tác động của biến đổi khí hậu": "Ứng dụng khoa học công nghệ để giảm thiểu các tác động của biến đổi khí hậu đến ĐBSCL, như mực nước biển dâng, xâm nhập mặn, hạn hán, lũ lụt.",
+          "Phát triển nông nghiệp bền vững": "Ứng dụng công nghệ để phát triển nông nghiệp thích ứng với biến đổi khí hậu, giảm thiểu tác động tiêu cực và tối ưu hóa năng suất.",
+          "Xây dựng các công trình phòng chống thiên tai": "Sử dụng công nghệ để xây dựng các công trình phòng chống thiên tai, giúp ứng phó với biến đổi khí hậu và bảo vệ cộng đồng.",
+          "Phát triển các giống cây trồng, vật nuôi thích ứng với biến đổi khí hậu": "Ứng dụng công nghệ sinh học để phát triển các giống cây trồng, vật nuôi có khả năng chống chịu với điều kiện khí hậu khắc nghiệt.",
+          "Kêu gọi sự tham gia của các bên liên quan": "Khuyến khích sự tham gia của chính phủ, doanh nghiệp và người dân trong việc ứng phó với biến đổi khí hậu, đảm bảo sự hợp tác chặt chẽ giữa các bên.",
+          "Xây dựng và quảng bá các mô hình điển hình về thích ứng với biến đổi khí hậu": "Chia sẻ những câu chuyện thành công về các cá nhân, cộng đồng đã áp dụng các giải pháp sáng tạo để thích ứng với biến đổi khí hậu, từ đó truyền cảm hứng và tạo động lực cho người khác hành động.",
+          "Khuyến khích đầu tư vào các dự án phát triển bền vững": "Thúc đẩy các khoản đầu tư vào các dự án thân thiện với môi trường, có khả năng thích ứng với biến đổi khí hậu và mang lại lợi ích kinh tế lâu dài."
+        },
+        "multiple": false
+      },      
+      {
+        "id": "environment_protection",
+        "prompt": "Nội dung nào về cơ hội bảo vệ môi trường và ứng phó với biến đổi khí hậu được đề cập trong tin bài?",
+        "description": "Chọn một nội dung chính về cách bảo vệ môi trường và ứng phó với biến đổi khí hậu trong bài báo.",
+        "options": [
+          "Quá trình chuyển đổi sẽ giúp bảo vệ môi trường",
+          "Quá trình chuyển đổi sẽ giảm thiểu tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp giảm thiểu các tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long, như mực nước biển dâng, xâm nhập mặn, hạn hán, lũ lụt",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp giảm thiểu các tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long, như ảnh hưởng đến sản xuất nông nghiệp, thủy sản",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp giảm thiểu các tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long, như ảnh hưởng đến sức khỏe và đời sống của người dân",
+          "Việc ứng dụng thành tựu khoa học và công nghệ sẽ giúp phát triển các giải pháp bền vững",
+          "Việc ứng dụng thành tựu khoa học và công nghệ sẽ giúp phát triển thân thiện với môi trường",
+          "Việc ứng dụng thành tựu khoa học và công nghệ sẽ giúp phát triển tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu, như: Xây dựng các công trình phòng chống thiên tai, ứng phó với biến đổi khí hậu",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu, như: Phát triển các giống cây trồng, vật nuôi thích ứng với biến đổi khí hậu",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu, như: Phát triển các mô hình sản xuất, kinh doanh bền vững, thân thiện với môi trường"
+        ],
+        "explanations": {
+          "Quá trình chuyển đổi sẽ giúp bảo vệ môi trường": "Nhấn mạnh rằng quá trình chuyển đổi kinh tế và xã hội theo hướng bền vững sẽ giúp giảm ô nhiễm và bảo vệ hệ sinh thái.",
+          "Quá trình chuyển đổi sẽ giảm thiểu tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long": "Thể hiện rằng các biện pháp thích ứng và giảm thiểu có thể giúp khu vực ĐBSCL ít bị ảnh hưởng hơn bởi biến đổi khí hậu.",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp giảm thiểu các tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long, như mực nước biển dâng, xâm nhập mặn, hạn hán, lũ lụt": "Nhấn mạnh vai trò của công nghệ trong việc đối phó với các vấn đề nghiêm trọng do biến đổi khí hậu gây ra.",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp giảm thiểu các tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long, như ảnh hưởng đến sản xuất nông nghiệp, thủy sản": "Tập trung vào việc công nghệ có thể giúp bảo vệ và phát triển các ngành kinh tế quan trọng như nông nghiệp và thủy sản.",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp giảm thiểu các tác động của biến đổi khí hậu đến đồng bằng sông Cửu Long, như ảnh hưởng đến sức khỏe và đời sống của người dân": "Nhấn mạnh cách công nghệ có thể giúp cải thiện điều kiện sống và sức khỏe của người dân tại ĐBSCL.",
+          "Việc ứng dụng thành tựu khoa học và công nghệ sẽ giúp phát triển các giải pháp bền vững": "Chỉ ra rằng công nghệ có thể tạo ra các phương pháp tiếp cận bền vững giúp bảo vệ môi trường lâu dài.",
+          "Việc ứng dụng thành tựu khoa học và công nghệ sẽ giúp phát triển thân thiện với môi trường": "Nhấn mạnh rằng công nghệ có thể giúp giảm thiểu tác động tiêu cực đến môi trường.",
+          "Việc ứng dụng thành tựu khoa học và công nghệ sẽ giúp phát triển tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu": "Chỉ ra rằng công nghệ có thể giúp khu vực ĐBSCL thích ứng tốt hơn với các thay đổi khí hậu.",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu, như: Xây dựng các công trình phòng chống thiên tai, ứng phó với biến đổi khí hậu": "Tập trung vào vai trò của công nghệ trong việc xây dựng cơ sở hạ tầng bảo vệ khỏi thiên tai.",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu, như: Phát triển các giống cây trồng, vật nuôi thích ứng với biến đổi khí hậu": "Chỉ ra rằng công nghệ sinh học có thể giúp tạo ra các giống cây trồng và vật nuôi có khả năng chống chịu với điều kiện khắc nghiệt.",
+          "Các giải pháp ứng dụng thành tựu khoa học và công nghệ sẽ giúp tăng cường khả năng chống chịu của đồng bằng sông Cửu Long trước biến đổi khí hậu, như: Phát triển các mô hình sản xuất, kinh doanh bền vững, thân thiện với môi trường": "Nhấn mạnh rằng công nghệ có thể giúp tạo ra các mô hình sản xuất và kinh doanh thân thiện với môi trường, giúp ĐBSCL thích ứng tốt hơn."
+        },
+        "multiple": false
+      },      
+      {
+        "id": "adaptation_solutions",
+        "prompt": "Bài viết có đề cập đến các giải pháp thích ứng với biến đổi khí hậu nào?",
+        "description": "Chọn các giải pháp thích ứng với biến đổi khí hậu được đề cập trong bài báo. Một bài báo có thể đề cập đến nhiều giải pháp khác nhau.",
+        "categories": {
+          "Giải pháp kỹ thuật và công nghệ": {
+            "description": "Các giải pháp ứng dụng công nghệ và kỹ thuật nhằm giảm thiểu tác động của biến đổi khí hậu.",
+            "options": [
+              "Xây dựng và nâng cấp hệ thống đê điều, kè chắn",
+              "Cải tạo hệ thống thủy lợi, công trình phòng chống lũ",
+              "Xây dựng nhà cửa, công trình kiên cố, chống chịu thiên tai",
+              "Xây dựng hệ thống giao thông thích ứng với nước biển dâng",
+              "Quy hoạch đô thị thông minh, thích ứng với biến đổi khí hậu",
+              "Áp dụng kỹ thuật canh tác thích ứng",
+              "Nuôi trồng thủy sản thích ứng với biến đổi khí hậu",
+              "Quản lý tài nguyên nước",
+              "Quản lý chất thải, giảm thiểu ô nhiễm môi trường",
+              "Phát triển năng lượng tái tạo",
+              "Xây dựng hệ thống cảnh báo sớm thiên tai",
+              "Khác",
+              "Không đề cập"
+            ]
+          },
+          "Giải pháp nông - lâm - ngư nghiệp": {
+            "description": "Các biện pháp trong lĩnh vực nông nghiệp, lâm nghiệp và thủy sản để thích ứng với biến đổi khí hậu.",
+            "options": [
+              "Trồng rừng ngập mặn",
+              "Chuyển đổi cơ cấu cây trồng, vật nuôi",
+              "Phát triển mô hình nông-lâm kết hợp",
+              "Áp dụng công nghệ tưới tiêu tiết kiệm nước",
+              "Phát triển nông nghiệp thông minh",
+              "Bảo tồn và sử dụng bền vững nguồn gen cây trồng, vật nuôi bản địa",
+              "Phát triển nuôi trồng thủy sản bền vững",
+              "Quản lý và bảo vệ rừng bền vững",
+              "Phát triển lâm nghiệp bền vững",
+              "Xây dựng hệ thống cảnh báo dịch bệnh cho cây trồng, vật nuôi",
+              "Tăng cường hợp tác quốc tế về nông - lâm - ngư nghiệp",
+              "Đầu tư vào nghiên cứu và phát triển",
+              "Khác",
+              "Không đề cập"
+            ]
+          },
+          "Giải pháp giáo dục, nâng cao nhận thức và quản lý": {
+            "description": "Các biện pháp nâng cao nhận thức, giáo dục cộng đồng và xây dựng chính sách ứng phó với biến đổi khí hậu.",
+            "options": [
+              "Tuyên truyền, giáo dục về biến đổi khí hậu và các giải pháp thích ứng",
+              "Tổ chức tập huấn, đào tạo kỹ năng cho người dân",
+              "Khuyến khích sự tham gia của cộng đồng vào các hoạt động ứng phó",
+              "Xây dựng mạng lưới chia sẻ thông tin và kiến thức về biến đổi khí hậu",
+              "Xây dựng và thực thi các chính sách, quy định về thích ứng với biến đổi khí hậu",
+              "Tăng cường hợp tác quốc tế, chia sẻ kinh nghiệm và nguồn lực",
+              "Đầu tư vào nghiên cứu và phát triển công nghệ thích ứng",
+              "Xây dựng cơ chế tài chính hỗ trợ thích ứng với biến đổi khí hậu",
+              "Khác"
+            ]
+          },
+          "Giải pháp khác": {
+            "description": "Các biện pháp ngoài ba nhóm trên.",
+            "options": [
+              "Bảo vệ và phục hồi hệ sinh thái",
+              "Di dời dân cư khỏi vùng nguy hiểm",
+              "Phát triển bảo hiểm nông nghiệp",
+              "Cải thiện hệ thống y tế để ứng phó với các bệnh truyền nhiễm liên quan đến biến đổi khí hậu",
+              "Khác"
+            ]
+          }
+        },
+        "multiple": true
+      }
+    ]
+  }
+  

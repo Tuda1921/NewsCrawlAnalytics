@@ -1,0 +1,6 @@
+- Đã add đến hết câu 12, cần add các khung từ 13 trở đi
+- Cần crawl data báo của từng page ok
+- Chốt file csv cần tra và add BOM
+- Cần biết cách cho llm đọc được báo chí, trả lời từng ques trong json kia để trả lời vào 1 file json
+
+
