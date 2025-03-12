@@ -17,6 +17,9 @@ with open(csv_file, 'r', encoding='utf-8') as csv_f:
     for row in csv_reader:
         articles[row['title']] = row['content']
 
+article_titles = list(articles.keys())
+selected_title = st.selectbox("Chọn bài báo", article_titles)
+
 # Đọc dữ liệu từ file output.txt
 analyses = {}
 current_title = None
@@ -39,9 +42,6 @@ with open(output_file, 'r', encoding='utf-8') as f:
             current_analysis.append(line.strip())
 
 col1, col2 = st.columns(2)
-article_titles = list(articles.keys())
-selected_title = st.selectbox("Chọn bài báo", article_titles)
-
 with col1:
     st.subheader("Nội dung bài báo")
     st.write(articles[selected_title])
