@@ -1,0 +1,10 @@
+{
+    "keyword": "bi\u1ebfn \u0111\u1ed5i kh\u00ed h\u1eadu\nph\u00e1t tri\u1ec3n b\u1ec1n v\u1eefng\nkhoa h\u1ecdc v\u00e0 c\u00f4ng ngh\u1ec7",
+    "site": "baocantho.com.vn",
+    "start_year": 2018,
+    "end_year": 2024,
+    "min_delay": 5.0,
+    "max_delay": 15.0,
+    "page_limit": 200,
+    "output_dir": "D:/Project/Crawl_Data"
+}
