@@ -51,7 +51,7 @@ with col1:
 with colq:
     st.subheader("Câu hỏi")
     # Đọc file schema
-    with open('survey_schema.json', 'r', encoding='utf-8') as f:
+    with open(json_file, 'r', encoding='utf-8') as f:
         schema = json.load(f)
         questions = schema['questions']
         
